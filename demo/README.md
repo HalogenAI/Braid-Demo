@@ -1,4 +1,4 @@
-# Braid VC Demo — Playbook
+# Braid Demo — Playbook
 
 **Audience:** investor. **Length:** ~7 minutes live. **Thesis you're proving:**
 *AI writes the code; the judgment behind it evaporates. Braid is the work layer
