@@ -1,7 +1,7 @@
 # Session 2 — Allocation + webhook (Thread B)
 
 You are implementing **payment allocation and webhook handling** for the same
-marketplace service. Reasoning must be visible, not just code.
+marketplace service. Write your implementation choices down as you go.
 
 ## Scope — edit ONLY these files
 - `src/payments/allocate.js`
@@ -30,17 +30,17 @@ call — another engineer owns it.
 Add tests in `test/allocate.test.js` and `test/webhook.test.js` proving: parts
 always sum to the total (include an amount that does not divide evenly, e.g.
 `1000` across weights `[1,1,1]`); a duplicate event is a no-op the second time;
-a mid-way failure applies nothing. Run `npm test` and make it pass.
+a mid-way failure applies nothing. Run `node --test` and make it pass.
 
-## Make your judgment visible (Braid is capturing this session)
-- Begin each distinct approach with `ATTEMPT <n>`.
-- Reject approaches explicitly: `DECISION: rejected` + the concrete reason.
-- Lock in the design with one line:
-  `DESIGN_DECISION: choice=<what> | alternatives=<what you weighed> | reason=<why this one>`
-- Finish with exactly one `VERDICT:` line.
+## Log your implementation choices (self-documenting work log)
+- `ATTEMPT <n>` before each distinct approach.
+- `DECISION: rejected <what and why>` whenever you switch approach, with the
+  concrete reason.
+- one line `DESIGN_DECISION: choice=<what> | alternatives=<what you weighed> | rationale=<why this one>`.
+- one final `VERDICT:` line.
 
-Call out the rounding choice specifically (e.g. largest-remainder vs. give the
+Call out the rounding choice specifically (largest-remainder vs. giving the
 remainder to the first/last recipient) and the idempotency-key choice
-(client-supplied vs. derived from the event) — these are the judgment calls.
+(client-supplied vs. derived from the event) — those are the judgment calls.
 
 Stop after the `VERDICT:` line. Do not open anything for review yet.
